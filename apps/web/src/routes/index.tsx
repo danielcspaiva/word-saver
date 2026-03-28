@@ -47,24 +47,20 @@ function LandingPage() {
       className="min-h-svh bg-black flex flex-col items-center justify-center"
       style={{ padding: "3rem 1.5rem" }}
     >
-      {/* Parent box: holds hero + footer with proper spacing */}
-      <div className="w-full max-w-6xl mx-auto flex flex-col items-center gap-10">
-        {/* Hero: clock + carousel */}
-        <div className="w-full flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-12">
-          {/* Clock */}
-          <div className="w-full lg:w-[40%] flex items-center justify-center px-4 lg:px-0">
-            <ClockBoard grid={GRID} activeCells={activeCells} />
-          </div>
-
-          {/* Photo carousel — stretches to match clock height */}
-          <div className="relative w-full lg:w-[60%] max-w-md lg:max-w-none lg:self-stretch overflow-hidden rounded-lg">
-            <PhotoCarousel />
-          </div>
+      <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row lg:flex-wrap items-center lg:items-stretch gap-8 lg:gap-12">
+        {/* Clock */}
+        <div className="order-1 w-full lg:w-[40%] flex items-center justify-center px-4 lg:px-0">
+          <ClockBoard grid={GRID} activeCells={activeCells} />
         </div>
 
-        {/* Footer: tagline + links */}
+        {/* Photo carousel */}
+        <div className="order-3 lg:order-2 relative w-full lg:flex-1 lg:min-w-0 max-w-md lg:max-w-none lg:self-stretch overflow-hidden rounded-lg">
+          <PhotoCarousel />
+        </div>
+
+        {/* Tagline + links */}
         <div
-          className="flex flex-col items-center gap-4"
+          className="order-2 lg:order-3 lg:basis-full flex flex-col items-center gap-4"
           style={{ fontFamily: "'Geist Mono', monospace" }}
         >
           <p className="text-zinc-600 text-[10px] tracking-[0.4em] uppercase">
