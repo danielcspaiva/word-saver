@@ -10,6 +10,7 @@
 		D0A6C7EE2F778FCB000DF358 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A6C7ED2F778FCB000DF358 /* ScreenSaver.framework */; };
 		D0A6C7F02F778FD8000DF358 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A6C7EF2F778FD8000DF358 /* WebKit.framework */; };
 		D0A6C7F32F7791BC000DF358 /* WordSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A6C7F12F779119000DF358 /* WordSaverView.swift */; };
+		AABB00112F7A0001000DF358 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = AABB00102F7A0001000DF358 /* thumbnail.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		D0A6C7ED2F778FCB000DF358 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
 		D0A6C7EF2F778FD8000DF358 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		D0A6C7F12F779119000DF358 /* WordSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSaverView.swift; sourceTree = "<group>"; };
+		AABB00102F7A0001000DF358 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A6C7F22F77913F000DF358 /* Resources */,
+				AABB00102F7A0001000DF358 /* thumbnail.png */,
 				D0A6C7F12F779119000DF358 /* WordSaverView.swift */,
 				D0A6C7EC2F778FCB000DF358 /* Frameworks */,
 				D0A6C7E62F778E5B000DF358 /* Products */,
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AABB00112F7A0001000DF358 /* thumbnail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +268,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WV544557G7;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -287,7 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				COMBINE_HIDPI_IMAGES = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WV544557G7;
 				GENERATE_INFOPLIST_FILE = YES;
