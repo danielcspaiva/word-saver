@@ -17,6 +17,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "^1.141.1",
     "dotenv": "catalog:",
+    "geist": "^1.7.0",
     "lucide-react": "catalog:",
     "next-themes": "catalog:",
     "react": "catalog:",
@@ -35,6 +36,7 @@
     "postcss": "^8.5.3",
     "tailwindcss": "catalog:",
     "typescript": "^5",
-    "vite": "^6.2.2"
+    "vite": "^6.2.2",
+    "vitest": "^4.1.2"
   }
 }

@@ -1,0 +1,39 @@
+import type { WordKey, WordPlacement } from "./types";
+
+export const GRID = [
+  "ITLISASAMPM",
+  "ACQUARTERDC",
+  "TWENTYFIVEX",
+  "HALFSTENFTO",
+  "PASTERUNINE",
+  "ONESIXTHREE",
+  "FOURFIVETWO",
+  "EIGHTELEVEN",
+  "SEVENTWELVE",
+  "TENSEOCLOCK",
+] as const;
+
+export const WORDS: Record<WordKey, WordPlacement> = {
+  IT: { row: 0, start: 0, end: 1 },
+  IS: { row: 0, start: 3, end: 4 },
+  QUARTER: { row: 1, start: 2, end: 8 },
+  TWENTY: { row: 2, start: 0, end: 5 },
+  MINUTE_FIVE: { row: 2, start: 6, end: 9 },
+  HALF: { row: 3, start: 0, end: 3 },
+  MINUTE_TEN: { row: 3, start: 5, end: 7 },
+  TO: { row: 3, start: 9, end: 10 },
+  PAST: { row: 4, start: 0, end: 3 },
+  HOUR_NINE: { row: 4, start: 7, end: 10 },
+  HOUR_ONE: { row: 5, start: 0, end: 2 },
+  HOUR_SIX: { row: 5, start: 3, end: 5 },
+  HOUR_THREE: { row: 5, start: 6, end: 10 },
+  HOUR_FOUR: { row: 6, start: 0, end: 3 },
+  HOUR_FIVE: { row: 6, start: 4, end: 7 },
+  HOUR_TWO: { row: 6, start: 8, end: 10 },
+  HOUR_EIGHT: { row: 7, start: 0, end: 4 },
+  HOUR_ELEVEN: { row: 7, start: 5, end: 10 },
+  HOUR_SEVEN: { row: 8, start: 0, end: 4 },
+  HOUR_TWELVE: { row: 8, start: 5, end: 10 },
+  HOUR_TEN: { row: 9, start: 0, end: 2 },
+  OCLOCK: { row: 9, start: 5, end: 10 },
+};
