@@ -16,18 +16,6 @@ class WordSaverView: ScreenSaverView {
     override var hasConfigureSheet: Bool { false }
     override var configureSheet: NSWindow? { nil }
 
-    override func draw(_ rect: NSRect) {
-        NSColor.black.setFill()
-        rect.fill()
-        if webView == nil {
-            let bundle = Bundle(for: type(of: self))
-            if let url = bundle.url(forResource: "thumbnail", withExtension: "png"),
-               let image = NSImage(contentsOf: url) {
-                image.draw(in: bounds, from: .zero, operation: .sourceOver, fraction: 1.0)
-            }
-        }
-    }
-
     override func startAnimation() {
         super.startAnimation()
         guard !isPreview, webView == nil else { return }
