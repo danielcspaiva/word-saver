@@ -31,14 +31,14 @@ function LandingPage() {
 
         <div className="flex items-center gap-6 text-[10px] tracking-[0.25em] uppercase">
           <a
-            href="https://github.com/danielcspaiva/wordsaver/releases/latest"
+            href="https://github.com/danielcspaiva/word-saver/releases/latest"
             className="text-zinc-400 hover:text-white transition-colors duration-500"
           >
             Download <span className="text-zinc-700">↓</span>
           </a>
           <span className="text-zinc-800">·</span>
           <a
-            href="https://github.com/danielcspaiva/wordsaver"
+            href="https://github.com/danielcspaiva/word-saver"
             className="text-zinc-600 hover:text-zinc-300 transition-colors duration-500"
           >
             Source

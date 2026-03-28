@@ -8,7 +8,7 @@ Displays the current time as illuminated words on a typographic grid. Built with
 
 ## Install
 
-1. Download `WordSaver.saver.zip` from the [latest release](https://github.com/danielcspaiva/wordsaver/releases/latest)
+1. Download `WordSaver.saver.zip` from the [latest release](https://github.com/danielcspaiva/word-saver/releases/latest)
 2. Extract and double-click `WordSaver.saver`
 3. Choose "Install for this user"
 4. Open **System Settings → Screen Saver** and select **WordSaver**
@@ -18,7 +18,7 @@ Displays the current time as illuminated words on a typographic grid. Built with
 Requires [Bun](https://bun.sh) and Xcode Command Line Tools.
 
 ```bash
-git clone https://github.com/danielcspaiva/wordsaver.git
+git clone https://github.com/danielcspaiva/word-saver.git
 cd wordsaver
 bun install
 ./apps/screensaver/scripts/build.sh

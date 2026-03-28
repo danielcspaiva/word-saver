@@ -1,5 +1,5 @@
 {
-  "name": "wordsaver",
+  "name": "word-saver",
   "private": true,
   "workspaces": {
     "packages": [
