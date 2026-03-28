@@ -25,7 +25,7 @@ cd "$XCODE_DIR"
 xcodebuild -project WordSaver.xcodeproj \
   -scheme WordSaver \
   -configuration Release \
-  CODE_SIGN_IDENTITY="-" \
+  OTHER_CODE_SIGN_FLAGS=--timestamp \
   build 2>&1 | tail -5
 
 # Find the built .saver
@@ -45,6 +45,10 @@ fi
 echo "==> Injecting web resources into bundle..."
 mkdir -p "$SAVER/Contents/Resources"
 cp -r "$RESOURCES_DIR/"* "$SAVER/Contents/Resources/"
+cp "$XCODE_DIR/thumbnail.png" "$SAVER/Contents/Resources/"
+
+echo "==> Re-signing after resource injection..."
+codesign --force --sign "Developer ID Application" --timestamp "$SAVER"
 
 echo "==> Installing to ~/Library/Screen Savers/..."
 mkdir -p "$INSTALL_DIR"

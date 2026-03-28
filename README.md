@@ -26,6 +26,8 @@ bun install
 
 The screensaver will be built and installed to `~/Library/Screen Savers/`.
 
+> **Note:** If macOS says the screensaver "is damaged", run `xattr -cr ~/Library/Screen\ Savers/WordSaver.saver` in Terminal. This is only needed for unsigned builds — the official release is signed and notarized.
+
 ## How it works
 
 The clock resolves the current time into English phrases at 5-minute intervals:
