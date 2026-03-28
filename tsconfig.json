@@ -1,0 +1,3 @@
+{
+  "extends": "@qlock-saver/config/tsconfig.base.json"
+}
