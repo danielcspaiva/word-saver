@@ -11,11 +11,11 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
   head: () => ({
     meta: [
       {
-        title: "qlock-saver",
+        title: "WordSaver",
       },
       {
         name: "description",
-        content: "QLOCKTWO-inspired word clock",
+        content: "A word clock screensaver for macOS",
       },
     ],
     links: [

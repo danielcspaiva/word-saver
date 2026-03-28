@@ -6,27 +6,16 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "serve": "vite preview",
-    "start": "vite",
-    "check-types": "vite build && tsc --noEmit"
+    "serve": "vite preview"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.1.1",
-    "@qlock-saver/env": "workspace:*",
-    "@qlock-saver/ui": "workspace:*",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "^1.141.1",
-    "dotenv": "catalog:",
     "geist": "^1.7.0",
-    "lucide-react": "catalog:",
-    "next-themes": "catalog:",
     "react": "catalog:",
-    "react-dom": "catalog:",
-    "sonner": "catalog:",
-    "zod": "catalog:"
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@qlock-saver/config": "workspace:*",
     "@tanstack/react-router-devtools": "^1.141.1",
     "@tanstack/router-plugin": "^1.141.1",
     "@types/node": "^22.13.14",

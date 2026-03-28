@@ -1,77 +1,53 @@
-# qlock-saver
+# WordSaver
 
-This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Router, and more.
+A word clock screensaver for macOS, inspired by QLOCKTWO.
 
-## Features
+Displays the current time as illuminated words on a typographic grid. Built with React + TypeScript, wrapped in a native macOS screensaver.
 
-- **TypeScript** - For type safety and improved developer experience
-- **TanStack Router** - File-based routing with full type safety
-- **TailwindCSS** - Utility-first CSS for rapid UI development
-- **Shared UI package** - shadcn/ui primitives live in `packages/ui`
-- **Husky** - Git hooks for code quality
-- **Oxlint** - Oxlint + Oxfmt (linting & formatting)
+## Install
 
-## Getting Started
+1. Download `WordSaver.saver.zip` from the [latest release](https://github.com/danielcspaiva/wordsaver/releases/latest)
+2. Extract and double-click `WordSaver.saver`
+3. Choose "Install for this user"
+4. Open **System Settings → Screen Saver** and select **WordSaver**
 
-First, install the dependencies:
+## Build from source
+
+Requires [Bun](https://bun.sh) and Xcode Command Line Tools.
 
 ```bash
+git clone https://github.com/danielcspaiva/wordsaver.git
+cd wordsaver
 bun install
+./apps/screensaver/scripts/build.sh
 ```
 
-Then, run the development server:
+The screensaver will be built and installed to `~/Library/Screen Savers/`.
 
-```bash
-bun run dev
-```
+## How it works
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to see the web application.
+The clock resolves the current time into English phrases at 5-minute intervals:
 
-## UI Customization
+- **7:00** → IT IS SEVEN O'CLOCK
+- **7:15** → IT IS QUARTER PAST SEVEN
+- **7:30** → IT IS HALF PAST SEVEN
+- **7:45** → IT IS QUARTER TO EIGHT
 
-React web apps in this stack share shadcn/ui primitives through `packages/ui`.
+A 10x11 letter grid contains all the words needed. Active letters glow white; inactive letters fade into the background.
 
-- Change design tokens and global styles in `packages/ui/src/styles/globals.css`
-- Update shared primitives in `packages/ui/src/components/*`
-- Adjust shadcn aliases or style config in `packages/ui/components.json` and `apps/web/components.json`
-
-### Add more shared components
-
-Run this from the project root to add more primitives to the shared UI package:
-
-```bash
-npx shadcn@latest add accordion dialog popover sheet table -c packages/ui
-```
-
-Import shared components like this:
-
-```tsx
-import { Button } from "@qlock-saver/ui/components/button";
-```
-
-### Add app-specific blocks
-
-If you want to add app-specific blocks instead of shared primitives, run the shadcn CLI from `apps/web`.
-
-## Git Hooks and Formatting
-
-- Initialize hooks: `bun run prepare`
-- Format and lint fix: `bun run check`
-
-## Project Structure
+## Architecture
 
 ```
-qlock-saver/
-├── apps/
-│   ├── web/         # Frontend application (React + TanStack Router)
-├── packages/
-│   ├── ui/          # Shared shadcn/ui components and styles
+core/time/    → Pure TS time-to-words engine (no UI deps)
+core/layout/  → Grid definition + cell resolution
+components/   → React rendering (CSS Grid + transitions)
+screensaver/  → Swift ScreenSaverView + WKWebView wrapper
 ```
 
-## Available Scripts
+## Inspiration
 
-- `bun run dev`: Start all applications in development mode
-- `bun run build`: Build all applications
-- `bun run dev:web`: Start only the web application
-- `bun run check-types`: Check TypeScript types across all apps
-- `bun run check`: Run Oxlint and Oxfmt
+Inspired by [QLOCKTWO](https://qlocktwo.com) by Biegert & Funk — a beautifully designed word clock that displays time in words. This project is an independent, open-source homage and is not affiliated with or endorsed by Biegert & Funk.
+
+## License
+
+MIT

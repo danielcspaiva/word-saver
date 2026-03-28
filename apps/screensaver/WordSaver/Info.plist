@@ -11,7 +11,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>QlockSaver</string>
+	<string>WordSaver</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
@@ -21,6 +21,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2026 Daniel Paiva. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>QlockSaver.QlockSaverView</string>
+	<string>WordSaver.WordSaverView</string>
 </dict>
 </plist>

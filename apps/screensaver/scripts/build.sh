@@ -5,7 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SCREENSAVER_DIR="$(dirname "$SCRIPT_DIR")"
 REPO_ROOT="$(dirname "$(dirname "$SCREENSAVER_DIR")")"
 WEB_DIR="$REPO_ROOT/apps/web"
-XCODE_DIR="$SCREENSAVER_DIR/QlockSaver"
+XCODE_DIR="$SCREENSAVER_DIR/WordSaver"
 RESOURCES_DIR="$XCODE_DIR/Resources"
 INSTALL_DIR="$HOME/Library/Screen Savers"
 
@@ -22,20 +22,20 @@ sed -i '' 's/ crossorigin//g' "$RESOURCES_DIR/index.html"
 
 echo "==> Building screensaver..."
 cd "$XCODE_DIR"
-xcodebuild -project QlockSaver.xcodeproj \
-  -scheme QlockSaver \
+xcodebuild -project WordSaver.xcodeproj \
+  -scheme WordSaver \
   -configuration Release \
   CODE_SIGN_IDENTITY="-" \
   build 2>&1 | tail -5
 
 # Find the built .saver
-BUILD_DIR=$(xcodebuild -project QlockSaver.xcodeproj \
-  -scheme QlockSaver \
+BUILD_DIR=$(xcodebuild -project WordSaver.xcodeproj \
+  -scheme WordSaver \
   -configuration Release \
   -showBuildSettings 2>/dev/null \
   | grep " BUILT_PRODUCTS_DIR" \
   | awk '{print $3}')
-SAVER="$BUILD_DIR/QlockSaver.saver"
+SAVER="$BUILD_DIR/WordSaver.saver"
 
 if [ ! -d "$SAVER" ]; then
   echo "ERROR: Build failed — $SAVER not found"
@@ -48,8 +48,8 @@ cp -r "$RESOURCES_DIR/"* "$SAVER/Contents/Resources/"
 
 echo "==> Installing to ~/Library/Screen Savers/..."
 mkdir -p "$INSTALL_DIR"
-rm -rf "$INSTALL_DIR/QlockSaver.saver"
+rm -rf "$INSTALL_DIR/WordSaver.saver"
 cp -r "$SAVER" "$INSTALL_DIR/"
 
 echo ""
-echo "Done! Open System Settings → Screen Saver → select QlockSaver"
+echo "Done! Open System Settings → Screen Saver → select WordSaver"

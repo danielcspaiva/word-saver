@@ -1,7 +1,7 @@
 import ScreenSaver
 import WebKit
 
-class QlockSaverView: ScreenSaverView {
+class WordSaverView: ScreenSaverView {
     private var webView: WKWebView?
 
     override init?(frame: NSRect, isPreview: Bool) {
