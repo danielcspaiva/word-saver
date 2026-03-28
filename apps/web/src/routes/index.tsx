@@ -86,8 +86,8 @@ function LandingPage() {
             </div>
           </div>
 
-          {/* Built by */}
-          <div className="flex items-center gap-2 text-[10px] tracking-[0.25em] uppercase text-zinc-700">
+          {/* Built by (desktop only) */}
+          <div className="hidden lg:flex items-center gap-2 text-[10px] tracking-[0.25em] uppercase text-zinc-700">
             <span>built by</span>
             <a
               href="https://github.com/danielcspaiva"
@@ -103,6 +103,27 @@ function LandingPage() {
               blog
             </a>
           </div>
+        </div>
+
+        {/* Built by (mobile only) */}
+        <div
+          className="order-4 flex lg:hidden items-center gap-2 text-[10px] tracking-[0.25em] uppercase text-zinc-700"
+          style={{ fontFamily: "'Geist Mono', monospace" }}
+        >
+          <span>built by</span>
+          <a
+            href="https://github.com/danielcspaiva"
+            className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
+          >
+            danielcspaiva
+          </a>
+          <span>·</span>
+          <a
+            href="https://dcsp.dev"
+            className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
+          >
+            blog
+          </a>
         </div>
       </div>
     </div>
