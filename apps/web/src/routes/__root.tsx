@@ -18,12 +18,7 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
         content: "A word clock screensaver for macOS",
       },
     ],
-    links: [
-      {
-        rel: "icon",
-        href: "/favicon.ico",
-      },
-    ],
+    links: [],
   }),
 });
 

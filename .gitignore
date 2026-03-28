@@ -58,6 +58,10 @@ xcuserdata/
 apps/screensaver/**/Resources/
 *.saver
 
+# Release artifacts (belong in GitHub Releases, not the repo)
+release/
+
 # Screenshots
 *.png
 !apps/web/public/**/*.png
+!docs/screenshot.png

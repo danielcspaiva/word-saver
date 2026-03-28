@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "vitest run"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "^1.141.1",
-    "geist": "^1.7.0",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
