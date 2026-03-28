@@ -28,6 +28,8 @@ function PhotoCarousel() {
           key={src}
           src={src}
           alt="WordSaver screensaver"
+          loading="lazy"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover transition-opacity duration-1000"
           style={{ opacity: i === active ? 0.85 : 0 }}
         />
