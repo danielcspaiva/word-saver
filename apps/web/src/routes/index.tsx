@@ -21,8 +21,14 @@ function LandingPage() {
         <ClockBoard grid={GRID} activeCells={activeCells} />
       </div>
 
+      <img
+        src="/macbook.jpg"
+        alt="WordSaver running on a MacBook"
+        className="mt-20 w-full max-w-lg rounded-lg opacity-80"
+      />
+
       <div
-        className="mt-40 flex flex-col items-center gap-4"
+        className="mt-12 flex flex-col items-center gap-4"
         style={{ fontFamily: "'Geist Mono', monospace" }}
       >
         <p className="text-zinc-600 text-[10px] tracking-[0.4em] uppercase">

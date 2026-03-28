@@ -65,3 +65,4 @@ release/
 *.png
 !apps/web/public/**/*.png
 !docs/screenshot.png
+!docs/macbook.jpg

@@ -4,7 +4,7 @@ A word clock screensaver for macOS, inspired by QLOCKTWO.
 
 Displays the current time as illuminated words on a typographic grid. Built with React + TypeScript, wrapped in a native macOS screensaver.
 
-![WordSaver screenshot](docs/screenshot.png)
+![WordSaver running on a MacBook](docs/macbook.jpg)
 
 ## Install
 
@@ -19,7 +19,7 @@ Requires [Bun](https://bun.sh) and Xcode Command Line Tools.
 
 ```bash
 git clone https://github.com/danielcspaiva/word-saver.git
-cd wordsaver
+cd word-saver
 bun install
 ./apps/screensaver/scripts/build.sh
 ```
