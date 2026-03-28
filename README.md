@@ -4,7 +4,7 @@ A word clock screensaver for macOS, inspired by QLOCKTWO.
 
 Displays the current time as illuminated words on a typographic grid. Built with React + TypeScript, wrapped in a native macOS screensaver.
 
-![WordSaver running on a MacBook](docs/macbook.jpg)
+![WordSaver running on a MacBook](docs/IMG_2379.jpeg)
 
 ## Install
 

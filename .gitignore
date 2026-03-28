@@ -66,3 +66,4 @@ release/
 !apps/web/public/**/*.png
 !docs/screenshot.png
 !docs/macbook.jpg
+!docs/IMG_2379.jpeg
