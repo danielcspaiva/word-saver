@@ -13,46 +13,6 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
       {
         title: "WordSaver",
       },
-      {
-        name: "description",
-        content: "A word clock screensaver for macOS",
-      },
-      {
-        name: "theme-color",
-        content: "#000000",
-      },
-      {
-        property: "og:type",
-        content: "website",
-      },
-      {
-        property: "og:title",
-        content: "WordSaver",
-      },
-      {
-        property: "og:description",
-        content: "A word clock screensaver for macOS",
-      },
-      {
-        property: "og:image",
-        content: "/og.png",
-      },
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-      {
-        name: "twitter:title",
-        content: "WordSaver",
-      },
-      {
-        name: "twitter:description",
-        content: "A word clock screensaver for macOS",
-      },
-      {
-        name: "twitter:image",
-        content: "/og.png",
-      },
     ],
     links: [
       {
