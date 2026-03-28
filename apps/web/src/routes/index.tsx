@@ -58,51 +58,51 @@ function LandingPage() {
           <PhotoCarousel />
         </div>
 
-        {/* Tagline + links */}
+        {/* Footer row */}
         <div
-          className="order-2 lg:order-3 lg:basis-full flex flex-col items-center gap-4"
+          className="order-2 lg:order-3 lg:basis-full flex flex-col lg:flex-row items-center lg:items-end lg:justify-between gap-6"
           style={{ fontFamily: "'Geist Mono', monospace" }}
         >
-          <p className="text-zinc-600 text-[10px] tracking-[0.4em] uppercase">
-            A word clock screensaver for macOS
-          </p>
+          {/* Tagline + links */}
+          <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 text-[10px] tracking-[0.25em] uppercase">
+            <p className="text-zinc-600 tracking-[0.4em]">A word clock screensaver for macOS</p>
 
-          <div className="flex items-center gap-6 text-[10px] tracking-[0.25em] uppercase">
+            <span className="hidden lg:inline text-zinc-800">·</span>
+
+            <div className="flex items-center gap-6">
+              <a
+                href="https://github.com/danielcspaiva/word-saver/releases/latest"
+                className="text-zinc-400 hover:text-white transition-colors duration-500"
+              >
+                Download <span className="text-zinc-700">↓</span>
+              </a>
+              <span className="text-zinc-800">·</span>
+              <a
+                href="https://github.com/danielcspaiva/word-saver"
+                className="text-zinc-600 hover:text-zinc-300 transition-colors duration-500"
+              >
+                Source
+              </a>
+            </div>
+          </div>
+
+          {/* Built by */}
+          <div className="flex items-center gap-2 text-[10px] tracking-[0.25em] uppercase text-zinc-700">
+            <span>built by</span>
             <a
-              href="https://github.com/danielcspaiva/word-saver/releases/latest"
-              className="text-zinc-400 hover:text-white transition-colors duration-500"
+              href="https://github.com/danielcspaiva"
+              className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
             >
-              Download <span className="text-zinc-700">↓</span>
+              danielcspaiva
             </a>
-            <span className="text-zinc-800">·</span>
+            <span>·</span>
             <a
-              href="https://github.com/danielcspaiva/word-saver"
-              className="text-zinc-600 hover:text-zinc-300 transition-colors duration-500"
+              href="https://dcsp.dev"
+              className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
             >
-              Source
+              blog
             </a>
           </div>
-        </div>
-
-        {/* Built by */}
-        <div
-          className="order-4 lg:basis-full flex items-center justify-center gap-2 text-[10px] tracking-[0.25em] uppercase text-zinc-700"
-          style={{ fontFamily: "'Geist Mono', monospace" }}
-        >
-          <span>built by</span>
-          <a
-            href="https://github.com/danielcspaiva"
-            className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
-          >
-            danielcspaiva
-          </a>
-          <span>·</span>
-          <a
-            href="https://dcsp.dev"
-            className="text-zinc-500 hover:text-zinc-300 transition-colors duration-500"
-          >
-            blog
-          </a>
         </div>
       </div>
     </div>
