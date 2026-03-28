@@ -50,12 +50,12 @@ function LandingPage() {
         {/* Hero: clock + carousel */}
         <div className="w-full flex flex-col lg:flex-row items-center lg:items-stretch gap-8 lg:gap-12">
           {/* Clock */}
-          <div className="w-full lg:w-[40%] flex items-center justify-center px-4 lg:px-0">
+          <div className="w-full lg:w-[40%] lg:order-2 flex items-center justify-center px-4 lg:px-0">
             <ClockBoard grid={GRID} activeCells={activeCells} />
           </div>
 
           {/* Photo carousel — stretches to match clock height */}
-          <div className="relative w-full lg:w-[60%] max-w-md lg:max-w-none lg:self-stretch overflow-hidden rounded-lg">
+          <div className="relative w-full lg:w-[60%] lg:order-1 max-w-md lg:max-w-none lg:self-stretch overflow-hidden rounded-lg">
             <PhotoCarousel />
           </div>
         </div>
