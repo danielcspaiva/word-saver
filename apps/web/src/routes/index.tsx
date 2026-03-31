@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { GRID, WORDS } from "@/core/layout/englishClassic";
 import { resolveActiveCells } from "@/core/layout/resolveActiveCells";
@@ -70,12 +70,12 @@ function LandingPage() {
             <span className="hidden lg:inline text-zinc-800">·</span>
 
             <div className="flex items-center gap-6">
-              <a
-                href="https://github.com/danielcspaiva/word-saver/releases/latest"
+              <Link
+                to="/download"
                 className="text-zinc-400 hover:text-white transition-colors duration-500"
               >
                 Download <span className="text-zinc-700">↓</span>
-              </a>
+              </Link>
               <span className="text-zinc-800">·</span>
               <a
                 href="https://github.com/danielcspaiva/word-saver"
