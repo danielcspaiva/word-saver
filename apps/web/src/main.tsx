@@ -1,5 +1,6 @@
 import { RouterProvider, createRouter } from "@tanstack/react-router";
 import ReactDOM from "react-dom/client";
+import { Analytics } from "@vercel/analytics/react";
 
 import { routeTree } from "./routeTree.gen";
 
@@ -23,5 +24,10 @@ if (!rootElement) {
 
 if (!rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement);
-  root.render(<RouterProvider router={router} />);
+  root.render(
+    <>
+      <RouterProvider router={router} />
+      <Analytics />
+    </>,
+  );
 }
