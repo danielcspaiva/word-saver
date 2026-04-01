@@ -16,6 +16,7 @@ export const GRID = [
 export const WORDS: Record<WordKey, WordPlacement> = {
   IT: { row: 0, start: 0, end: 1 },
   IS: { row: 0, start: 3, end: 4 },
+  A: { row: 0, start: 5, end: 5 },
   QUARTER: { row: 1, start: 2, end: 8 },
   TWENTY: { row: 2, start: 0, end: 5 },
   MINUTE_FIVE: { row: 2, start: 6, end: 9 },
