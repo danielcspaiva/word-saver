@@ -1,6 +1,7 @@
 export type WordKey =
   | "IT"
   | "IS"
+  | "A"
   | "QUARTER"
   | "TWENTY"
   | "MINUTE_FIVE"
