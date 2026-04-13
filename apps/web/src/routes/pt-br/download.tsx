@@ -1,27 +1,27 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { GRID, WORDS } from "@/core/layout/englishClassic";
+import { GRID, WORDS } from "@/core/layout/portugueseBrazilian";
 import { resolveActiveCells } from "@/core/layout/resolveActiveCells";
-import { useCurrentTime } from "@/hooks/useCurrentTime";
+import { useCurrentTimePtBr } from "@/hooks/useCurrentTimePtBr";
 import { ClockBoard } from "@/components/ClockBoard";
 
-export const Route = createFileRoute("/download")({
-  component: DownloadPage,
+export const Route = createFileRoute("/pt-br/download")({
+  component: DownloadPagePtBr,
   head: () => ({
     meta: [
-      { title: "Download WordSaver — A Word Clock Screensaver for macOS" },
+      { title: "Baixar WordSaver — Um relógio de palavras para macOS" },
       {
         name: "description",
         content:
-          "Download and install WordSaver, a free open-source word clock screensaver for macOS.",
+          "Baixe e instale o WordSaver, um protetor de tela open-source com relógio de palavras para macOS.",
       },
       {
         property: "og:title",
-        content: "Download WordSaver — A Word Clock Screensaver for macOS",
+        content: "Baixar WordSaver — Um relógio de palavras para macOS",
       },
       {
         property: "og:description",
         content:
-          "Download and install WordSaver, a free open-source word clock screensaver for macOS.",
+          "Baixe e instale o WordSaver, um protetor de tela open-source com relógio de palavras para macOS.",
       },
       {
         property: "og:image",
@@ -29,17 +29,17 @@ export const Route = createFileRoute("/download")({
       },
       {
         property: "og:url",
-        content: "https://wordsaver.vercel.app/download",
+        content: "https://wordsaver.vercel.app/pt-br/download",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Download WordSaver — A Word Clock Screensaver for macOS",
+        content: "Baixar WordSaver — Um relógio de palavras para macOS",
       },
       {
         name: "twitter:description",
         content:
-          "Download and install WordSaver, a free open-source word clock screensaver for macOS.",
+          "Baixe e instale o WordSaver, um protetor de tela open-source com relógio de palavras para macOS.",
       },
       {
         name: "twitter:image",
@@ -52,23 +52,23 @@ export const Route = createFileRoute("/download")({
 const STEPS = [
   {
     number: "1",
-    title: "Download",
-    description: "Get the latest release from GitHub.",
+    title: "Baixar",
+    description: "Obtenha a última versão no GitHub.",
   },
   {
     number: "2",
-    title: "Unzip",
-    description: "Extract WordSaver.saver from the zip file.",
+    title: "Descompactar",
+    description: "Extraia o WordSaver.saver do arquivo zip.",
   },
   {
     number: "3",
-    title: "Install",
-    description: "Double-click the .saver file to add it to System Settings.",
+    title: "Instalar",
+    description: "Dê um duplo clique no arquivo .saver para adicioná-lo às Ajustes do Sistema.",
   },
 ];
 
-function DownloadPage() {
-  const words = useCurrentTime();
+function DownloadPagePtBr() {
+  const words = useCurrentTimePtBr();
   const activeCells = resolveActiveCells(words, WORDS);
 
   return (
@@ -76,23 +76,21 @@ function DownloadPage() {
       className="relative min-h-svh bg-black flex flex-col items-center justify-center overflow-hidden"
       style={{ padding: "3rem 1.5rem", fontFamily: "'Geist Mono', monospace" }}
     >
-      {/* Background clock */}
       <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none select-none">
         <div className="w-full max-w-2xl px-8">
           <ClockBoard grid={GRID} activeCells={activeCells} />
         </div>
       </div>
 
-      {/* Content */}
       <div className="relative z-10 w-full max-w-md mx-auto flex flex-col items-center gap-12">
         <Link
-          to="/"
+          to="/pt-br"
           className="text-zinc-600 text-[10px] tracking-[0.4em] uppercase hover:text-zinc-400 transition-colors duration-500"
         >
           WordSaver
         </Link>
 
-        <h1 className="text-zinc-400 text-[10px] tracking-[0.4em] uppercase">Install</h1>
+        <h1 className="text-zinc-400 text-[10px] tracking-[0.4em] uppercase">Instalar</h1>
 
         <ol className="w-full flex flex-col gap-8">
           {STEPS.map((step) => (
@@ -109,21 +107,21 @@ function DownloadPage() {
         </ol>
 
         <p className="text-zinc-800 text-[10px] tracking-[0.2em] uppercase">
-          Requires macOS 14 Sonoma or later
+          Requer macOS 14 Sonoma ou posterior
         </p>
 
         <a
           href="https://github.com/danielcspaiva/word-saver/releases/latest"
           className="text-zinc-300 text-[10px] tracking-[0.25em] uppercase border border-zinc-800 px-6 py-3 hover:border-zinc-600 hover:text-white transition-all duration-500"
         >
-          Download from GitHub <span className="text-zinc-700">↓</span>
+          Baixar do GitHub <span className="text-zinc-700">↓</span>
         </a>
 
         <Link
-          to="/pt-br/download"
+          to="/download"
           className="text-zinc-700 text-[10px] tracking-[0.4em] uppercase hover:text-zinc-500 transition-colors duration-500"
         >
-          PT-BR
+          EN
         </Link>
       </div>
     </div>

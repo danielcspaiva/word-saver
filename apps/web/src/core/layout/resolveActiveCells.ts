@@ -1,8 +1,8 @@
-import type { CellId, WordKey, WordPlacement } from "./types";
+import type { CellId, WordPlacement } from "./types";
 
-export function resolveActiveCells(
-  keys: WordKey[],
-  words: Record<WordKey, WordPlacement>,
+export function resolveActiveCells<K extends string>(
+  keys: readonly K[],
+  words: Record<K, WordPlacement>,
 ): Set<CellId> {
   const cells = new Set<CellId>();
 
